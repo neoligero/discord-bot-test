@@ -1,11 +1,10 @@
 import dotenv from 'dotenv';
 dotenv.config();
-const { TOKEN, CLIENT_ID, GUILD_ID } = process.env;
+const { TOKEN, CLIENT_ID } = process.env;
 
 if (
   !TOKEN ||
-  !CLIENT_ID ||
-  !GUILD_ID
+  !CLIENT_ID
 ) {
   throw new Error('Missing env vars');
 }
@@ -13,7 +12,6 @@ if (
 const config: Record<string, string> = {
   TOKEN,
   CLIENT_ID,
-  GUILD_ID,
 }
 
 export default config;
