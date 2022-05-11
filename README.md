@@ -5,20 +5,24 @@
 - The bot needs to be verified to do somethings like manage GuildMembers.
 
 ## Walkthrough
-### Give bot permissions to the bot
+
+### Run the app
+ - Go to https://discord.com/developers
+ - After sign up, creates a new app and a bot.
+ - Copy the CLIENT_ID and the TOKEN and paste it in the .env file.
+
+### Give access to the bot to your channel
+In the same developer portal you have a tool for generate this url, example:
 https://discord.com/api/oauth2/authorize?client_id=968875767922573312&permissions=8&scope=bot%20applications.commands
+You just have to paste it into the explorer and follow the steps.
 
-### Give to the user
+### Claim viewer permissions
 If you want to be able to claim invites and special offers from your streamers
-
 https://discord.com/oauth2/authorize?client_id=836232765942923305&response_type=code&redirect_uri=https%3a%2f%2fko-fi.com/Discord/IdentifyAuthResponse&scope=identify%20guilds%20guilds.join
 
 ## Tips
-
-- The bot needs to be promoted to a role higher than theirs for make it work
-
-- Some intents are secured and need to be specifically approved in the bot configuration section until the bot is fully verified.
-https://discordpy.readthedocs.io/en/stable/intents.html
+ - The bot needs to be promoted to a role higher than theirs for make it work
+ - Some intents are secured and need to be specifically approved in the bot configuration section until the bot is fully verified. https://discordpy.readthedocs.io/en/stable/intents.html
 
 ## Bibliografia
 

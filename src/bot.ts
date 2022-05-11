@@ -52,6 +52,12 @@ client.on('interactionCreate', async (interaction: Interaction) => {
 });
 
 client.on("messageCreate", async (message: Message) => {
+  // Ignore any messages sent as direct messages.
+  // The bot will only accept commands issued in a guild.
+  if (!message.guild) {
+    return;
+  }
+
   if (message.content === "ping") {
     await message.reply("pong");
   }
@@ -61,11 +67,12 @@ client.on('channelCreate', async (channel: Channel) => {
   console.log((channel as TextChannel).name);
 })
 
+// Added to a server
 client.on("guildCreate", guild => {
   console.log("Joined a new guild: " + guild.name);
 })
 
-//removed from a server
+// Removed from a server
 client.on("guildDelete", guild => {
   console.log("Left a guild: " + guild.name);
 })
