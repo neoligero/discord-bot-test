@@ -1,6 +1,5 @@
 import { AnyChannel, Channel, Client, Guild, GuildMember, Intents, Interaction, Message, OAuth2Guild, Role, RoleResolvable, TextChannel } from 'discord.js';
 import 'dotenv/config';
-import { isAssertClause } from 'typescript';
 import {
   getGuilds,
   getChannels,

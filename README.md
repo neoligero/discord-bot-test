@@ -10,11 +10,16 @@
  - Go to https://discord.com/developers
  - After sign up, creates a new app and a bot.
  - Copy the CLIENT_ID and the TOKEN and paste it in the .env file.
+ - yarn dev
 
 ### Give access to the bot to your channel
 In the same developer portal you have a tool for generate this url, example:
-https://discord.com/api/oauth2/authorize?client_id=968875767922573312&permissions=8&scope=bot%20applications.commands
+https://discord.com/api/oauth2/authorize?client_id=968875767922573312&permissions=8&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fredirect&response_type=code&scope=bot%20identify%20applications.store.update
 You just have to paste it into the explorer and follow the steps.
+
+Response example:
+http://localhost:3000/redirect?code=CJlXNpaQLb93HQqQcFPQhh4cBr5OWT&guild_id=973149157772623872&permissions=8
+Now should save the guild_id for future interactions.
 
 ### Claim viewer permissions
 If you want to be able to claim invites and special offers from your streamers
